@@ -3,6 +3,8 @@
 
 目前先做binlog+canal+kafka+es+kibana这一套流程
 
+qq交流群：java爱好编程群（452753966），加群备注canal
+
 ## 前期准备
 - mysql 开启bin-log日志
 - cannal基础知识：安装canal服务端，写canal客户端代码
@@ -21,3 +23,8 @@
 1.  硬编码
 2.  aop
 3.  bin-log分析
+## 常见问题答疑：
+
+Q1:
+A1:
+
