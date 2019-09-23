@@ -1,11 +1,18 @@
 # dataCollection
+数据采集器
+
 数据源(mysql binlog)(或者是业务日志)->日志解析器(解析binlog用canal，其他自定义)->mq(kafka)->数据库（es/redis）->前端展示(Kibana)
 数据流向：Beats或自研系统上报日志到Kafka，然后Logstash从Kafka读取数据写入ES.Client，最终数据存放到ES.Data节点。用户可以通过Kibana或ES.Client的Restful接口查询数据。
 
+(目前先做binlog+canal+kafka+es+kibana这一套流程)
 
-目前先做binlog+canal+kafka+es+kibana这一套流程
+其实我的预期是不管是cannal收集binlog还是logstash利用filebeat收集web日志，亦或者程序网关埋点统计用户行为，这些都是数据收集。
+收集完了要放一个地方，通用方案是kafka。
+关键是处理数据，目前俩个想法1.是结合用户画像做一个实时推荐系统，2.是简单的搭个es+kibana做个数据展示+索引。
 
-qq交流群：java爱好编程群（452753966），加群备注canal
+
+
+qq交流群：java爱好编程群（452753966），加群备注 dc
 
 ## 前期准备
 - mysql 开启bin-log日志
